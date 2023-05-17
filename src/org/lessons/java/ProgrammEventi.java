@@ -59,17 +59,17 @@ public class ProgrammEventi {
 	
 	public String calendario() {
 		
-		String calendarioFormato = "";
+		String titoloProgramma = this.titolo;
 		
 		this.eventi.sort((o1,o2) -> o1.getData().compareTo(o2.getData()));
 		
 		for (int i = 0; i < this.eventi.size(); i++) {
 			
-			calendarioFormato = this.eventi.get(i).getData() + "-" + this.eventi.get(i).getTitolo() + "-" + this.titolo;
+			System.out.println(this.eventi.get(i).getData() + "-" + this.eventi.get(i).getTitolo() + "-" + this.titolo); 
 			
 		}
 		
-		return calendarioFormato;
+		return titoloProgramma;
 		
 	}
 	

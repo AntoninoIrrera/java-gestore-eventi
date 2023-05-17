@@ -39,9 +39,9 @@ public class Concerto extends Evento{
 	
 	public LocalDateTime dataOraFormattata() {
 		
-		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("d/MM/yyyy hh:mm:ss");
+		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
 		
-		String dataEOra = "" + getData() + this.ora;
+		String dataEOra = getData() + " " + this.ora;
 		
 		
 		LocalDateTime localDateTime = LocalDateTime.parse(dataEOra, formatter);
